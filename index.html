@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            .thumbnail {
+            	position: relative;
+            	float: left;
+                width: 20%;
+            }
+            .label {
+            	overflow: hidden;
+                width: 80%;
+            }
+            .media_entry {
+            	 margin: 0;
+                 width: 100%;
+            }
+            .th_btn {
+            	position: absolute; left: 5px; top: 5px;
+            	opacity: 0.4;
+                filter: alpha(opacity=30);
+                width: 150;
+                height: 110;
+            }
+            b {
+                font-size: 222%;
+            }
+        </style>
+        <title>Library -> All Videos view</title>
+    </head>
+    <body>
+        <h2>Personal Media Library Viewer</h2> 
+        <div>
+            <a href="#" onclick='all_vid_view()' id='all_vid_view'><b>All Videos View</b></a>|<a href="#" id='favs_view' onclick='favs_view()'>Favorites View</a>
+            <a style="position: absolute; right: 10px" href="settings.html"><img src="/client/static/settings.png" width="40" height="40"/></a>
+        </div>
+        <p> Search: 
+            <input type="text" id="searchQuery"/>
+            <input type="button" id="searchButton" onclick="simpleSearch()" value="Search"></input>
+            <input type="button" id="searchButton" onclick="clearSearch()" value="Clear Search"></input>
+        </p>
+        <div>
+
+        </div>
+        <div id="result_summary">
+        </div>
+        <div id="ui_control">
+            <select onchange="change_page_size()" id="pg_sz">
+                <option>100</option>
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+            </select>
+        </div>
+        <div id="library">
+            <img src="/client/static/loader.gif"/>
+        </div>
+        <div id="pager">
+            <img src="/client/static/loader.gif"/>
+        </div>
+        <script type="text/javascript" src="/client/static/parse.js"></script>
+        <script type="text/javascript" src="/client/static/search.js"></script>
+        <script type="text/javascript" src="/client/static/favorite.js"></script>
+        <script type="text/javascript" src="/client/static/thumbnail.js"></script>
+    </body>
+</html>

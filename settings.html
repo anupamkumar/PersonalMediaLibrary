@@ -1,0 +1,39 @@
+<html>
+<head>
+<style>
+
+</style>
+<title>Settings</title>
+</head>
+<body>
+	<h2>Settings</h2>
+	<div id="save_status"></div>
+	<div id="library_dir">
+		<h4>Library Top Level Directories</h4>
+		<textarea id="t_lib_dir" rows="6" cols="85"></textarea>
+		<p><input type="button" value="View Library Sync status"/></p>
+	</div>
+	<div id="ffmpeg_settings">
+		<h4>FFMPEG settings</h4>
+		<p>Audio Channels</p><input type="text" id="audio_channels" />
+		<p>CRF</p><input type="text" id="crf" />
+		<p>Max Bit Rate</p><input type="text" id="max_bit_rate" />
+		<p>Buffer Size</p><input type="text" id="buffer_size" />
+		<p>Pixel Format</p><input type="text" id="pixel_format" />
+		<p>Video Resolution</p><input type="text" id="video_size" />
+		<p>Video Aspect Ratio</p><input type="text" id="video_aspect_ratio" />
+		<p>Video Frame Rate</p><input type="text" id="video_frame_rate" />
+		<p>HLS Packet Time</p><input type="text" id="hls_packet_time" />
+		<p>HLS List Size</p><input type="text" id="hls_list_size" />
+		<p>HLS Wrap Limit</p><input type="text" id="hls_wrap_limit" />
+		<p>HLS Start Frame</p><input type="text" id="hls_start_frame" />
+		<p>Max Number of FFMPEG processes running in parallel on server</p><input type="text" id="max_ffmpeg_procs" />
+	</div>
+	<div id="Media Cache">
+	<h4>Media Cache</h4>
+	<p>Maxium Number of Media Files in Cache</p><input type="text" id="cache_max_size"/>
+	</div>
+	<div id="save"><p><input type="button" value="save" onclick="saveChanges()"/></p></div>
+	<script type="text/javascript" src="/client/static/settings.js"></script>
+</body>
+</html>
